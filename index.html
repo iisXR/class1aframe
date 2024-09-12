@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+    <!-- Generated automatically by AFRAME Exporter for Blender - https://silverslade.itch.io/a-frame-blender-exporter -->
+    <!-- MIT License: https://github.com/silverslade/aframe_blender_exporter/blob/master/LICENSE -->
+    <head>
+        <title>WebXR Application</title>
+        <link rel="icon" type="image/png" href="favicon.ico"/>
+        <meta name="description" content="3D Application">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+        <script type="text/javascript" src="js/webxr.js"></script>
+        <script type="text/javascript" src="js/joystick.js"></script>
+        <script type="text/javascript" src="js/camera-cube-env.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body onload="init();">
+        <a-scene  joystick shadow="type: pcfsoft; autoUpdate: true;" renderer="antialias: true; colorManagement: false; physicallyCorrectLights: true;">
+            <!-- Assets -->
+            <a-assets>
+				<a-asset-item id="BodyBaseModel" src="./assets/BodyBaseModel.gltf"></a-asset-item>
+				<a-asset-item id="BézierCurve.001" src="./assets/BézierCurve.001.gltf"></a-asset-item>
+				<a-asset-item id="Camera Target" src="./assets/Camera Target.gltf"></a-asset-item>
+				<a-asset-item id="ground" src="./assets/ground.gltf"></a-asset-item>
+				<a-asset-item id="light target" src="./assets/light target.gltf"></a-asset-item>
+				<a-asset-item id="Low_Animal" src="./assets/Low_Animal.gltf"></a-asset-item>
+				<a-asset-item id="Low_Animal.001" src="./assets/Low_Animal.001.gltf"></a-asset-item>
+				<a-asset-item id="Low_Animal.002" src="./assets/Low_Animal.002.gltf"></a-asset-item>
+				<a-asset-item id="Low_Animal.003" src="./assets/Low_Animal.003.gltf"></a-asset-item>
+				<a-asset-item id="Low_Animal.004" src="./assets/Low_Animal.004.gltf"></a-asset-item>
+				<a-asset-item id="Material_Preview_Dummy" src="./assets/Material_Preview_Dummy.gltf"></a-asset-item>
+				<a-asset-item id="Sphere.001" src="./assets/Sphere.001.gltf"></a-asset-item>
+				<a-asset-item id="stand" src="./assets/stand.gltf"></a-asset-item>
+				<a-asset-item id="stand.001" src="./assets/stand.001.gltf"></a-asset-item>
+				<a-asset-item id="stand.002" src="./assets/stand.002.gltf"></a-asset-item>
+				<a-asset-item id="stand.003" src="./assets/stand.003.gltf"></a-asset-item>
+				<a-asset-item id="stand.004" src="./assets/stand.004.gltf"></a-asset-item>
+				<a-asset-item id="stand.005" src="./assets/stand.005.gltf"></a-asset-item>
+				<a-asset-item id="stand.006" src="./assets/stand.006.gltf"></a-asset-item>
+				<a-asset-item id="stand.007" src="./assets/stand.007.gltf"></a-asset-item>
+                <img id="sky"                 src="./resources/sky.jpg">
+                <img id="icon-play"           src="./resources/play.png">
+                <img id="icon-pause"          src="./resources/pause.png">
+                <img id="icon-play-skip-back" src="./resources/play-skip-back.png">
+                <img id="icon-mute"           src="./resources/mute.png">
+                <img id="icon-volume-low"     src="./resources/volume-low.png">
+                <img id="icon-volume-high"    src="./resources/volume-high.png">
+            </a-assets>
+
+            <!-- Entities -->
+            
+			<a-entity id="#BodyBaseModel" gltf-model="#BodyBaseModel" scale="1 1 1" position="-7.428237438201904 2.91333270072937 7.522305011749268" visible="true" shadow="cast: true"  animation= "property: rotation; to: 0 360 0; loop: true; dur: 10000" ></a-entity>
+			<a-entity id="#BézierCurve.001" gltf-model="#BézierCurve.001" scale="1 1 1" position="0.4926227927207947 2.795642852783203 -10.637884140014648" visible="true" shadow="cast: true"  geometry="" cube-env-map="path: /env/; extension: jpg; reflectivity: 0.99;" ></a-entity>
+			<a-entity id="#Camera Target"  scale="1 1 1" position="0.0 0.0 -10.63804817199707" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#ground" gltf-model="#ground" scale="1 1 1" position="0.0 0.0 1.0007693163061049e-07" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#light target"  scale="1 1 1" position="0.0 0.0 -10.63804817199707" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Low_Animal" gltf-model="#Low_Animal" scale="1 1 1" position="-10.730567932128906 1.7857990264892578 0.015553683042526245" visible="true" shadow="cast: true"  animation= "property: rotation; to: 0 360 0; loop: true; dur: 10000" ></a-entity>
+			<a-entity id="#Low_Animal.001" gltf-model="#Low_Animal.001" scale="1 1 1" position="7.522287845611572 1.781204342842102 -7.500096321105957" visible="true" shadow="cast: true"  animation= "property: rotation; to: 0 360 0; loop: true; dur: 10000" ></a-entity>
+			<a-entity id="#Low_Animal.002" gltf-model="#Low_Animal.002" scale="1 1 1" position="7.713139533996582 1.956336259841919 7.490411758422852" visible="true" shadow="cast: true"  animation= "property: rotation; to: 0 360 0; loop: true; dur: 10000" ></a-entity>
+			<a-entity id="#Low_Animal.003" gltf-model="#Low_Animal.003" scale="1 1 1" position="-4.063496703565761e-07 2.0192625522613525 11.060153007507324" visible="true" shadow="cast: true"  animation= "property: rotation; to: 0 360 0; loop: true; dur: 10000" ></a-entity>
+			<a-entity id="#Low_Animal.004" gltf-model="#Low_Animal.004" scale="1 1 1" position="10.63804817199707 1.9006692171096802 -0.018307693302631378" visible="true" shadow="cast: true"  animation= "property: rotation; to: 0 360 0; loop: true; dur: 10000" ></a-entity>
+			<a-entity id="#Material_Preview_Dummy"  scale="1 1 1" position="0.0 0.0 -10.63804817199707" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Sphere.001" gltf-model="#Sphere.001" scale="1 1 1" position="-7.522235870361328 2.7276694774627686 -7.486518383026123" visible="true" shadow="cast: true"  animation= "property: rotation; to: 0 360 0; loop: true; dur: 10000" ></a-entity>
+			<a-entity id="#stand" gltf-model="#stand" scale="1 1 1" position="-10.638049125671387 0.38551899790763855 -2.0177429504997235e-08" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#stand.001" gltf-model="#stand.001" scale="1 1 1" position="-7.522236347198486 0.38551899790763855 7.522236347198486" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#stand.002" gltf-model="#stand.002" scale="1 1 1" position="-2.0177434834067753e-08 0.38551899790763855 10.63804817199707" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#stand.003" gltf-model="#stand.003" scale="1 1 1" position="7.522235870361328 0.38551899790763855 7.522235870361328" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#stand.004" gltf-model="#stand.004" scale="1 1 1" position="10.63804817199707 0.38551899790763855 2.017741351778568e-08" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#stand.005" gltf-model="#stand.005" scale="1 1 1" position="7.522235870361328 0.38551899790763855 -7.522235870361328" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#stand.006" gltf-model="#stand.006" scale="1 1 1" position="2.0177431281354075e-08 0.38551899790763855 -10.63804817199707" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#stand.007" gltf-model="#stand.007" scale="1 1 1" position="-7.522235870361328 0.38551899790763855 -7.522235870361328" visible="true" shadow="cast: true" ></a-entity>
+
+            <!-- Camera -->
+            <a-entity id="player" 
+                position="0 -0.2 0" 
+                movement-controls="speed: 0.10000000149011612;">
+                <a-entity id="camera" 
+                    camera="near: 0.001" 
+                    position="0 1.7000000476837158 0" 
+                    look-controls="pointerLockEnabled: true">
+                        <a-entity id="cursor" cursor="fuse: false;" animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 50; from: 	0.1 0.1 0.1; to: 1 1 1"
+                            position="0 0 -0.1"
+                            geometry="primitive: circle; radius: 0.001;"
+                            material="color: #CCC; shader: flat;"
+                            raycaster = "far: 10.0; interval: 1500.0; objects: .clickable,.links">
+                        </a-entity>
+                </a-entity>
+                    <a-entity id="leftHand" oculus-touch-controls="hand: left" vive-controls="hand: left"></a-entity>
+					<a-entity id="rightHand" laser-controls oculus-touch-controls="hand: right" vive-controls="hand: right" raycaster = "far: 10.0; interval: 1500.0; objects: .clickable,.links"></a-entity>
+            </a-entity>
+
+            <!-- Lights -->
+            <a-entity light="intensity: 1.0; castShadow: true; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2" position="1.36586 7.17965 1"></a-entity>
+			<a-entity light="type: ambient; intensity: 1.0"></a-entity>
+
+            <!-- Sky -->
+            <a-sky color="#ECECEC"></a-sky>
+        </a-scene>
+    </body>
+</html>
+<!-- Generated automatically by AFRAME Exporter for Blender - https://silverslade.itch.io/a-frame-blender-exporter -->
+<!-- MIT License: https://github.com/silverslade/aframe_blender_exporter/blob/master/LICENSE -->
